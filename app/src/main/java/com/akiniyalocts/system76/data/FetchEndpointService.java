@@ -73,9 +73,12 @@ public class FetchEndpointService extends IntentService {
 
                 }
                 for (Element child : link.children()) {
-                    System.out.println(child.html());
                     itemDescr = child.html().replaceAll("(learn more)", "<br><br>");
+                    itemDescr = itemDescr.replaceAll("(<span class=\"meter\").*(</span>)", "");
+                    itemDescr = itemDescr.replaceAll("(<div class=\"progress\").*", "");
+                    itemDescr = itemDescr.replaceAll("(<h5).*","");
 
+                    System.out.println(itemDescr);
                     for (Element more : child.children()) {
                         if (more.hasClass("product-image")) {
                             imageLink = more.html().substring(more.html().indexOf("/"), more.html().lastIndexOf("\""));

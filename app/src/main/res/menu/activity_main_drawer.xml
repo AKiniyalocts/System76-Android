@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_laptops" android:icon="@drawable/ic_computer_black_18dp"
+            android:title="@string/laptops" android:checked="true" />
+        <item android:id="@+id/nav_desktops" android:icon="@drawable/ic_desktop_mac_black_18dp"
+            android:title="@string/desktops" />
+        <item android:id="@+id/nav_servers" android:icon="@drawable/ic_memory_black_18dp"
+            android:title="@string/servers" />
+        <item android:id="@+id/nav_swag" android:icon="@drawable/ic_favorite_black_18dp"
+            android:title="@string/swag" />
+    </group>
+
+    <item android:title="@string/contact"
+        >
+        <menu>
+            <item android:id="@+id/nav_twitter"
+                android:title="@string/twitter" />
+            <item android:id="@+id/nav_fb"
+                android:title="@string/fb" />
+            <item android:id="@+id/nav_google"
+                android:title="@string/google_plus" />
+
+        </menu>
+    </item>
+
+</menu>
